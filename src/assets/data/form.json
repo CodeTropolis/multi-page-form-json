@@ -2,7 +2,7 @@
     {
       "PageID": 172,
       "Name": "Welcome",
-      "Label": "Welcome",
+      "Label": "This app uses a JSON file to build forms",
       "NextPageId": 0,
       "Outlet": null,
       "Validation": null,
