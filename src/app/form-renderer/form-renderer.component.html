@@ -1,0 +1,28 @@
+<form [formGroup]="form">
+	<div *ngFor="let question of questions">
+		<div [ngSwitch]="question.UI">
+			<div *ngSwitchCase="'lb'" style="margin-bottom: 8px;">
+				{{question.Label}}
+			</div>
+			<div *ngSwitchCase="'cb'" style="margin-bottom: 8px;">
+				<mat-checkbox [formControlName]="question.QuestionID" style="margin-right: 8px;">
+					{{question.Label}}
+				</mat-checkbox>
+			</div>
+			<div *ngSwitchCase="'tb'" style="margin-bottom: 8px;">
+				<mat-form-field>
+					<mat-label>{{question.Label}} (required)</mat-label>
+					<input matInput type="text" [formControlName]="question.QuestionID" />
+				</mat-form-field>
+        <div *ngIf="f[question.QuestionID].touched" class="invalid-feedback">
+            <mat-error *ngIf="f[question.QuestionID].invalid">{{question.Label}} is required</mat-error>
+        </div>
+			</div>
+			<div *ngSwitchCase="'rbil'" style="margin-bottom: 8px;">
+				<mat-radio-group aria-label="Select an option" [formControlName]="question.QuestionID">
+					<mat-radio-button value="yes">{{question.Label}}</mat-radio-button>
+				</mat-radio-group>
+			</div>
+		</div>
+	</div>
+</form>

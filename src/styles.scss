@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.wrapper {
+    width: 85%;
+    margin: 0 auto;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button-group button {
+    margin: 10px;
+  }
+  
+  /* button.submit {
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+  } */
+  
+  section {
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 30px 0;
+  }
+  
+  mat-progress-bar {
+    margin: 30px 0;
+  }
+  
+  .mat-paginator-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-end; */
+    justify-content: flex-start !important;
+    min-height: 56px;
+    padding: 0 8px;
+    width: 100%;
+  }
+  
+  mat-error {margin-top: -12px;}
+  
+  .mat-paginator-icon {
+      width: 52px !important;
+      fill: currentColor;
+      margin-top: -7px;
+  }
